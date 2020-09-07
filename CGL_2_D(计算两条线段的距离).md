@@ -1,6 +1,6 @@
 
 ### CGL_2_D(计算两条线段的距离)
-
+https://lianming.gitee.io/geometrytest/%E7%BA%BF%E6%AE%B5%E6%9C%80%E5%B0%8F%E8%B7%9D%E7%A6%BB/
 
 ```js
 export function distanceBetweenLines2(segA, segB, lineA, lineB) {
