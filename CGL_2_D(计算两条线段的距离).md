@@ -1,7 +1,17 @@
-> 参考: https://shunsuke.me/en/competitive/aoj/cgl_2_d/
 
-### 计算两条线段的距离
+### CGL_2_D(计算两条线段的距离)
 
-**解:**
-- 2个线段相交 -> 距离为0
-- 2个线段不相交 -> 2个线段的4个顶点的最小值
+
+```js
+export function distanceBetweenLines2(segA, segB, lineA, lineB) {
+    let lineBAAxis = lineB.clone().sub(lineA).normalize();
+    let inPlaneA = segA.clone().sub(lineA).projectOnPlane(lineBAAxis).add(lineA);
+    let inPlaneB = segB.clone().sub(lineA).projectOnPlane(lineBAAxis).add(lineA);
+    let inPlaneBA = inPlaneB.clone().sub(inPlaneA);
+    let t = lineA.clone().sub(inPlaneA).dot(inPlaneBA) / inPlaneBA.lengthSq();
+    let rayPoint = segA.clone().lerp(segB, Math.min(Math.max(t, 0), 1));
+    let ab = closestToSegment(rayPoint, segA, segB)
+    let cd = closestToSegment(ab, lineA, lineB)
+    return ab.distanceTo(cd)
+}
+```
