@@ -1,6 +1,6 @@
 ### CGL_1_C(判断三个点的位置关系)
 ![alt](./img/003.png)
-
+https://www.cnblogs.com/wind-chaser/p/10889537.html
 ```js
 function ccw(p0, p1, p2) {
  // 逆时针方向
