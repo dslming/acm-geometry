@@ -10,7 +10,7 @@
 
 [题汇总](https://www.cnblogs.com/bztMinamoto/category/1413022.html)
 
-[计算几何资源汇总](https://oi-wiki.org/geometry/2d/)
+[计算几何资源汇总 oi-wiki](https://oi-wiki.org/geometry/2d/)
 ### todo:
 - [ ] 旋转卡壳
 - [ ] LOJ_6544
